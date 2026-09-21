@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+
+  --color-brand-orange: #F05401;
+  --color-brand-orange-dark: #D94B00;
+  --color-brand-cream: #FEE7B5;
+  --color-brand-burgundy: #441825;
+  --color-brand-paper: #FFFDF8;
+  --color-brand-sand: #FAF6EE;
+  --color-brand-sand-dark: #EFE7DA;
+  --color-brand-dark: #242321;
+  --color-brand-muted: #736E65;
+  --color-brand-border: #E8DFC8;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFDF8;
+    color: #242321;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFDF8;
+    color: #242321;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: var(--font-serif);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Fluid typography clamp utilities for editorial scale */
+.headline-huge {
+  font-family: var(--font-serif);
+  font-size: clamp(68px, 10vw, 190px);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+}
+
+.headline-cinema {
+  font-family: var(--font-serif);
+  font-size: clamp(84px, 12.5vw, 230px);
+  line-height: 0.84;
+  letter-spacing: -0.035em;
+}
+
+/* Tighter, controlled hero headline for 72vh-82vh above-the-fold composition */
+.headline-hero {
+  font-family: var(--font-serif);
+  font-size: clamp(52px, 6.4vw, 118px);
+  line-height: 0.85;
+  letter-spacing: -0.035em;
+}
+
+@media (min-width: 1440px) {
+  .headline-hero {
+    font-size: clamp(80px, 6.8vw, 124px);
+    line-height: 0.84;
+  }
+}
+
+@media (max-width: 640px) {
+  .headline-hero {
+    font-size: clamp(48px, 13vw, 70px);
+    line-height: 0.88;
+  }
+}
+
+.headline-sub {
+  font-family: var(--font-serif);
+  font-size: clamp(38px, 5.5vw, 84px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+
+/* Editorial micro tracking */
+.micro-label {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-weight: 600;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF6EE;
+}
+::-webkit-scrollbar-thumb {
+  background: #D8CEB8;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F05401;
+}

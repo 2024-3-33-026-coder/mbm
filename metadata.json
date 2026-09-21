@@ -1,0 +1,6 @@
+{
+  "name": "Masked By Me",
+  "description": "Luxury ingredient-first skincare system. Craft personalized masks and rituals by combining raw bases, freeze-dried boosters, botanical gels, and nourishing oils.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
